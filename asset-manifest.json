@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/golf-scorecard/static/css/main.2218c5bf.chunk.css",
+    "main.js": "/golf-scorecard/static/js/main.19064506.chunk.js",
+    "main.js.map": "/golf-scorecard/static/js/main.19064506.chunk.js.map",
+    "runtime-main.js": "/golf-scorecard/static/js/runtime-main.466c1af3.js",
+    "runtime-main.js.map": "/golf-scorecard/static/js/runtime-main.466c1af3.js.map",
+    "static/js/2.d39ff048.chunk.js": "/golf-scorecard/static/js/2.d39ff048.chunk.js",
+    "static/js/2.d39ff048.chunk.js.map": "/golf-scorecard/static/js/2.d39ff048.chunk.js.map",
+    "static/js/3.1706a8bb.chunk.js": "/golf-scorecard/static/js/3.1706a8bb.chunk.js",
+    "static/js/3.1706a8bb.chunk.js.map": "/golf-scorecard/static/js/3.1706a8bb.chunk.js.map",
+    "index.html": "/golf-scorecard/index.html",
+    "static/css/main.2218c5bf.chunk.css.map": "/golf-scorecard/static/css/main.2218c5bf.chunk.css.map",
+    "static/js/2.d39ff048.chunk.js.LICENSE.txt": "/golf-scorecard/static/js/2.d39ff048.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.466c1af3.js",
+    "static/js/2.d39ff048.chunk.js",
+    "static/css/main.2218c5bf.chunk.css",
+    "static/js/main.19064506.chunk.js"
+  ]
+}

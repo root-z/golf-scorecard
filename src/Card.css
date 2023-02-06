@@ -1,0 +1,68 @@
+table, th, td {
+  /* border: 1px solid; */
+  border-collapse: collapse;
+  margin: 5px 5px;
+  /* font-size: 1em; */
+  font-family: sans-serif;
+  /* min-width: 400px; */
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+}
+
+tbody th {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 5px;
+}
+
+th, td {
+  padding: 1.5% 1.5%;
+  scroll-snap-align: end;
+  scroll-snap-type: x mandatory;
+}
+
+tbody tr {
+  border-bottom: thin solid #dddddd;
+
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+  padding: 10px 5px;
+}
+
+.score {
+  width: 3em;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-size: 1em;
+}
+
+.addPlayer {
+  width: 100%;
+  font-size: 1em;
+}
+
+.playerName {
+  width: 95%;
+  font-size: 1em;
+}
+
+tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.addPlayerCol {
+  background-color: #dddddd;
+}
+
+
+.addPlayerError {
+  color: black;
+}

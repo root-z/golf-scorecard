@@ -50,9 +50,9 @@ export function Scorecard(props) {
     players.forEach(player => {
       elems.push(
         <td>
-          <input 
+          <input
             type="number"
-            className="score" 
+            className="score"
             value={scores.get(player)?.[hole] || ''}
             onChange={evt => updateScores(hole, player, parseInt(evt.target.value))}>
           </input>
@@ -85,7 +85,7 @@ export function Scorecard(props) {
 
       elems.push(
         <td>
-          { finalScore }
+          {finalScore}
         </td>
       );
     });
@@ -106,7 +106,7 @@ export function Scorecard(props) {
   }
 
   function reset() {
-    setPars(Array(18).fill(3)); 
+    setPars(Array(18).fill(3));
     setScores(Immutable.Map(newScore));
     setPlayers(Immutable.List());
     setNewPlayer("");
@@ -115,48 +115,51 @@ export function Scorecard(props) {
 
   return (
     <div>
-    <table>
-      <tbody>
-      <tr>
-        <th>Hole</th>
-        <th>Par</th>
-        { getPlayers() }
-        <th rowSpan="0" className="addPlayerCol">
-          <input
-            type="text"
-            className="playerName"
-            value={newPlayer}
-            onChange={evt => setNewPlayer(evt.target.value)}></input><br/>
-          <button className="addPlayer" onClick={addNewPlayer}>Add Player</button><br/>
-          <p className="addPlayerError">{newPlayerError}</p>
-        </th>
-      </tr>
-      { 
-        range(0, 18).map(i => 
-          <tr>
-            <td>{i + 1}</td>
-            <td>
-              <input 
-                type="number" 
-                className="score" 
-                value={pars[i] || ''}
-                onChange={evt => updatePars(i, parseInt(evt.target.value))}
-                ></input>
+      <h1>Simple Golf</h1>
+      <div>
+        <table>
+          <tbody key="table">
+            <tr key="title">
+              <th>Hole</th>
+              <th>Par</th>
+              {getPlayers()}
+              <th rowSpan="0" className="addPlayerCol">
+                <input
+                  type="text"
+                  className="playerName"
+                  value={newPlayer}
+                  onChange={evt => setNewPlayer(evt.target.value)}></input><br />
+                <button className="addPlayer" onClick={addNewPlayer}>Add Player</button><br />
+                <p className="addPlayerError">{newPlayerError}</p>
+              </th>
+            </tr>
+            {
+              range(0, 18).map(i =>
+                <tr key={`hole${i}`}>
+                  <td>{i + 1}</td>
+                  <td>
+                    <input
+                      type="number"
+                      className="score"
+                      value={pars[i] || ''}
+                      onChange={evt => updatePars(i, parseInt(evt.target.value))}
+                    ></input>
+                  </td>
+                  {getScores(i)}
+                </tr>
+              )
+            }
+            <tr key="final">
+              <td>Final</td>
+              <td>
+                {pars.reduce((sum, elem) => sum + elem, 0) || ''}
               </td>
-            { getScores(i) }
-          </tr>
-        )
-      } 
-      <tr>
-        <td>Final</td>
-        <td>
-          { pars.reduce((sum, elem) => sum + elem, 0) || '' }
-        </td>
-        { getFinalScores() }
-      </tr>
-      </tbody>
-    </table>
-    <button className="reset" onClick={reset}>Reset</button>
+              {getFinalScores()}
+            </tr>
+          </tbody>
+        </table>
+        <button className="reset" onClick={reset}>Reset</button>
+      </div>
     </div>
   )
 }
